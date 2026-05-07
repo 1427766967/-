@@ -29,7 +29,7 @@ export default function SellerLogin() {
     setLoading(false);
 
     if (error || !data) {
-      setMessage("手机号或密码错误");
+      setMessage(error ? `错误: ${error.message}` : "手机号或密码错误");
       return;
     }
 
